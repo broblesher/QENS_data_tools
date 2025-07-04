@@ -17,4 +17,4 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           flake8-version: "7.1.2"
-          ignore: "W291,D"
+          ignore: "W291,w503,D"
