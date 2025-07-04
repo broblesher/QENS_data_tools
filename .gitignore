@@ -205,3 +205,5 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+dict_areas.csv
+QENS_MainApp_CopiaOLD.py
