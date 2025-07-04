@@ -265,9 +265,9 @@ class MainWin(QMainWindow, Ui_MainWindow):
         # Si no es el primero de la lista y el anterior en la lista es mayor
         # que el actual, pongo el anterior
         elif (
-            cur_item != 0 and
-            float(self.comboBox_Q.itemText(cur_item - 1)) >
-            float(self.comboBox_Q.itemText(cur_item))
+            cur_item != 0
+            and float(self.comboBox_Q.itemText(cur_item - 1))
+            > float(self.comboBox_Q.itemText(cur_item))
         ):
             self.comboBox_Q.setCurrentIndex(cur_item - 1)
             next_qvalue = self.comboBox_Q.itemText(cur_item - 1)

@@ -353,9 +353,9 @@ class FuncionesMenuIntegrar:
         n_ROIs = pd.Series(n_ROIs_arr, name='no.ROIs')
         dfDic = pd.concat([q_values, n_ROIs], axis=1)
         for roi_index in range(5):  # range(len(dic[q_value]["lareas"])):
-            emin_h = 'E_min_' + str(roi_index+1) + ' (meV)'
-            emax_h = 'E_max_' + str(roi_index+1) + ' (meV)'
-            area_h = 'Area_' + str(roi_index+1)
+            emin_h = 'E_min_' + str(roi_index + 1) + ' (meV)'
+            emax_h = 'E_max_' + str(roi_index + 1) + ' (meV)'
+            area_h = 'Area_' + str(roi_index + 1)
             for q_value in dic.keys():
                 if len(dic[q_value]["lareas"]) < roi_index + 1:
                     emin.append(None)
