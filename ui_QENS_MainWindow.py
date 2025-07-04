@@ -1,32 +1,25 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'QENS_MainWindow_fbSCie.ui'
-##
-## Created by: Qt User Interface Compiler version 6.9.0
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
+"""
+Filename: QENStoCSV_Dlg.py
+Author: Beatriz Robles Hernández
+Date: 2025-03-10
+Version: 1.0
+Description:
+    This script creates the class of the GUI that uses
+    the app_QENStoCSV_Dlg application.
 
-#from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-#    QMetaObject, QObject, QPoint, QRect,
-#    QSize, QTime, QUrl, Qt)
-#from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-#    QCursor, QFont, QFontDatabase, QGradient,
-#    QIcon, QImage, QKeySequence, QLinearGradient,
-#    QPainter, QPalette, QPixmap, QRadialGradient,
-#    QTransform)
-#from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QGraphicsView,
-#    QGridLayout, QGroupBox, QHBoxLayout, QLabel,
-#    QMainWindow, QMenu, QMenuBar, QPushButton,
-#    QSizePolicy, QSpacerItem, QStatusBar, QToolBar,
-#    QVBoxLayout, QWidget)
+License: GLP
+Contact: broblesher@gmail.com
+Dependencies: os, PyQt5
+"""
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QAction
-from PyQt5.QtGui import QIcon
+# from PyQt5.QtGui import QIcon
 
 import pyqtgraph as pg
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -42,7 +35,8 @@ class Ui_MainWindow(object):
         icon1 = QtGui.QIcon.fromTheme("QIcon::ThemeIcon::DocumentOpen")
         self.actionFrom_csv.setIcon(icon1)
         self.actionExport_data_as_csv = QAction(MainWindow)
-        self.actionExport_data_as_csv.setObjectName(u"actionExport_data_as_csv")
+        self.actionExport_data_as_csv.setObjectName(
+            u"actionExport_data_as_csv")
         icon2 = QtGui.QIcon.fromTheme("QIcon::ThemeIcon::DocumentSaveAs")
         self.actionExport_data_as_csv.setIcon(icon2)
         self.actionExit = QAction(MainWindow)
@@ -83,9 +77,12 @@ class Ui_MainWindow(object):
         self.gridLayout_8.addWidget(self.label_xmin_ROI5, 0, 0, 1, 1)
         self.lineEdit_area_ROI5 = QtWidgets.QLineEdit(self.groupBox_ROI5)
         self.lineEdit_area_ROI5.setObjectName(u"lineEdit_area_ROI5")
-        self.lineEdit_area_ROI5.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.lineEdit_area_ROI5.setAlignment(QtCore.Qt.AlignmentFlag.AlignTrailing)
-        self.lineEdit_area_ROI5.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.lineEdit_area_ROI5.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight)
+        self.lineEdit_area_ROI5.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignTrailing)
+        self.lineEdit_area_ROI5.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lineEdit_area_ROI5.setEnabled(False)
         self.gridLayout_8.addWidget(self.lineEdit_area_ROI5, 2, 3, 1, 1)
         self.label_area_ROI5 = QtWidgets.QLabel(self.groupBox_ROI5)
@@ -118,9 +115,12 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.lineEdit_xmax_ROI1, 1, 1, 1, 1)
         self.lineEdit_area_ROI1 = QtWidgets.QLineEdit(self.groupBox_ROI1)
         self.lineEdit_area_ROI1.setObjectName(u"lineEdit_area_ROI1")
-        self.lineEdit_area_ROI1.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.lineEdit_area_ROI1.setAlignment(QtCore.Qt.AlignmentFlag.AlignTrailing)
-        self.lineEdit_area_ROI1.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.lineEdit_area_ROI1.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight)
+        self.lineEdit_area_ROI1.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignTrailing)
+        self.lineEdit_area_ROI1.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lineEdit_area_ROI1.setEnabled(False)
         self.gridLayout_3.addWidget(self.lineEdit_area_ROI1, 1, 3, 1, 1)
         self.lineEdit_xmin_ROI1 = QtWidgets.QLineEdit(self.groupBox_ROI1)
@@ -142,9 +142,12 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.label_xmin_ROI2, 0, 0, 1, 1)
         self.lineEdit_area_ROI2 = QtWidgets.QLineEdit(self.groupBox_ROI2)
         self.lineEdit_area_ROI2.setObjectName(u"lineEdit_area_ROI2")
-        self.lineEdit_area_ROI2.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.lineEdit_area_ROI2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTrailing)
-        self.lineEdit_area_ROI2.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.lineEdit_area_ROI2.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight)
+        self.lineEdit_area_ROI2.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignTrailing)
+        self.lineEdit_area_ROI2.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lineEdit_area_ROI2.setEnabled(False)
         self.gridLayout_5.addWidget(self.lineEdit_area_ROI2, 1, 3, 1, 1)
         self.lineEdit_xmin_ROI2 = QtWidgets.QLineEdit(self.groupBox_ROI2)
@@ -167,9 +170,12 @@ class Ui_MainWindow(object):
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.lineEdit_area_ROI4 = QtWidgets.QLineEdit(self.groupBox_ROI4)
         self.lineEdit_area_ROI4.setObjectName(u"lineEdit_area_ROI4")
-        self.lineEdit_area_ROI4.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.lineEdit_area_ROI4.setAlignment(QtCore.Qt.AlignmentFlag.AlignTrailing)
-        self.lineEdit_area_ROI4.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.lineEdit_area_ROI4.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight)
+        self.lineEdit_area_ROI4.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignTrailing)
+        self.lineEdit_area_ROI4.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lineEdit_area_ROI4.setEnabled(False)
         self.gridLayout_7.addWidget(self.lineEdit_area_ROI4, 1, 3, 1, 1)
         self.label_xmin_ROI4 = QtWidgets.QLabel(self.groupBox_ROI4)
@@ -213,9 +219,12 @@ class Ui_MainWindow(object):
         self.gridLayout_6.setObjectName(u"gridLayout_6")
         self.lineEdit_area_ROI3 = QtWidgets.QLineEdit(self.groupBox_ROI3)
         self.lineEdit_area_ROI3.setObjectName(u"lineEdit_area_ROI3")
-        self.lineEdit_area_ROI3.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.lineEdit_area_ROI3.setAlignment(QtCore.Qt.AlignmentFlag.AlignTrailing)
-        self.lineEdit_area_ROI3.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.lineEdit_area_ROI3.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight)
+        self.lineEdit_area_ROI3.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignTrailing)
+        self.lineEdit_area_ROI3.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lineEdit_area_ROI3.setEnabled(False)
         self.gridLayout_6.addWidget(self.lineEdit_area_ROI3, 1, 3, 1, 1)
         self.lineEdit_xmin_ROI3 = QtWidgets.QLineEdit(self.groupBox_ROI3)
@@ -245,16 +254,16 @@ class Ui_MainWindow(object):
             20, 40, QtWidgets.QSizePolicy.Policy.Minimum,
             QtWidgets.QSizePolicy.Policy.Expanding)
         self.gridLayout_9.addItem(self.verticalSpacer_5, 8, 0, 1, 1)
-        self.pushButton_ExportRes = QtWidgets.QPushButton(self.groupBox_area)#
-        self.pushButton_ExportRes.setObjectName(u"pushButton_ExportRes")#
-        self.gridLayout_9.addWidget(self.pushButton_ExportRes, 9, 0, 1, 1)#
+        self.pushButton_ExportRes = QtWidgets.QPushButton(self.groupBox_area)
+        self.pushButton_ExportRes.setObjectName(u"pushButton_ExportRes")
+        self.gridLayout_9.addWidget(self.pushButton_ExportRes, 9, 0, 1, 1)
         self.groupBox_ROI1.raise_()
         self.groupBox_ROI2.raise_()
         self.groupBox_ROI3.raise_()
         self.groupBox_ROI4.raise_()
         self.groupBox_ROI5.raise_()
         self.pushButton_CalcAreas.raise_()
-        self.pushButton_ExportRes.raise_()#
+        self.pushButton_ExportRes.raise_()
         self.horizontalLayout_3.addWidget(self.groupBox_area)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -334,43 +343,87 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtCore.QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionFrom_source.setText(QtCore.QCoreApplication.translate("MainWindow", u"From source...", None))
-        self.actionFrom_csv.setText(QtCore.QCoreApplication.translate("MainWindow", u"From csv...", None))
-        self.actionExport_data_as_csv.setText(QtCore.QCoreApplication.translate("MainWindow", u"Export data as csv...", None))
-        self.actionExit.setText(QtCore.QCoreApplication.translate("MainWindow", u"Exit", None))
-        self.actionIntegrate.setText(QtCore.QCoreApplication.translate("MainWindow", u"Integrate", None))
-        self.actionFourier_transform.setText(QtCore.QCoreApplication.translate("MainWindow", u"Fourier transform", None))
-        self.groupBox_area.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"Area under curve", None))
-        self.groupBox_ROI5.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"ROI 5", None))
-        self.label_xmax_ROI5.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmax:", None))
-        self.label_xmin_ROI5.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmin:", None))
-        self.label_area_ROI5.setText(QtCore.QCoreApplication.translate("MainWindow", u"Area:", None))
-        self.groupBox_ROI1.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"ROI 1", None))
-        self.label_xmin_ROI1.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmin:", None))
-        self.label_xmax_ROI1.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmax:", None))
-        self.label_area_ROI1.setText(QtCore.QCoreApplication.translate("MainWindow", u"Area:", None))
-        self.groupBox_ROI2.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"ROI 2", None))
-        self.label_area_ROI2.setText(QtCore.QCoreApplication.translate("MainWindow", u"Area:", None))
-        self.label_xmin_ROI2.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmin:", None))
-        self.label_xmax_ROI2.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmax:", None))
-        self.groupBox_ROI4.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"ROI 4", None))
-        self.label_xmin_ROI4.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmin:", None))
-        self.label_area_ROI4.setText(QtCore.QCoreApplication.translate("MainWindow", u"Area:", None))
-        self.label_xmax_ROI4.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmax:", None))
-        self.label_nROIs.setText(QtCore.QCoreApplication.translate("MainWindow", u"Number of ROIs", None))
-        self.groupBox_ROI3.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"ROI 3", None))
-        self.label_xmax_ROI3.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmax:", None))
-        self.label_xmin_ROI3.setText(QtCore.QCoreApplication.translate("MainWindow", u"Xmin:", None))
-        self.label_area_ROI3.setText(QtCore.QCoreApplication.translate("MainWindow", u"Area:", None))
-        self.pushButton_CalcAreas.setText(QtCore.QCoreApplication.translate("MainWindow", u"Calculate Areas", None))
-        self.pushButton_ExportRes.setText(QtCore.QCoreApplication.translate("MainWindow", u"Export Results", None))#
-        self.label_Q.setText(QtCore.QCoreApplication.translate("MainWindow", u"Q (\u00c5\u00af\u00b9):", None))
-        self.pushButton_Q_p.setText(QtCore.QCoreApplication.translate("MainWindow", u"Q +", None))
-        self.pushButton_Q_m.setText(QtCore.QCoreApplication.translate("MainWindow", u"Q -", None))
-        self.menuFile.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"File", None))
-        self.menuLoad_data.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"&Load data", None))
-        self.menuAnalysis.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"Analysis", None))
-        self.menuHelp.setTitle(QtCore.QCoreApplication.translate("MainWindow", u"Help", None))
-        self.toolBar.setWindowTitle(QtCore.QCoreApplication.translate("MainWindow", u"toolBar", None))
+        MainWindow.setWindowTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"MainWindow", None))
+        self.actionFrom_source.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"From source...", None))
+        self.actionFrom_csv.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"From csv...", None))
+        self.actionExport_data_as_csv.setText(
+            QtCore.QCoreApplication.translate(
+                "MainWindow", u"Export data as csv...", None))
+        self.actionExit.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Exit", None))
+        self.actionIntegrate.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Integrate", None))
+        self.actionFourier_transform.setText(
+            QtCore.QCoreApplication.translate(
+                "MainWindow", u"Fourier transform", None))
+        self.groupBox_area.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area under curve", None))
+        self.groupBox_ROI5.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"ROI 5", None))
+        self.label_xmax_ROI5.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmax:", None))
+        self.label_xmin_ROI5.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmin:", None))
+        self.label_area_ROI5.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area:", None))
+        self.groupBox_ROI1.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"ROI 1", None))
+        self.label_xmin_ROI1.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmin:", None))
+        self.label_xmax_ROI1.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmax:", None))
+        self.label_area_ROI1.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area:", None))
+        self.groupBox_ROI2.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"ROI 2", None))
+        self.label_area_ROI2.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area:", None))
+        self.label_xmin_ROI2.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmin:", None))
+        self.label_xmax_ROI2.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmax:", None))
+        self.groupBox_ROI4.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"ROI 4", None))
+        self.label_xmin_ROI4.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmin:", None))
+        self.label_area_ROI4.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area:", None))
+        self.label_xmax_ROI4.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmax:", None))
+        self.label_nROIs.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Number of ROIs", None))
+        self.groupBox_ROI3.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"ROI 3", None))
+        self.label_xmax_ROI3.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmax:", None))
+        self.label_xmin_ROI3.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Xmin:", None))
+        self.label_area_ROI3.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Area:", None))
+        self.pushButton_CalcAreas.setText(
+            QtCore.QCoreApplication.translate(
+                "MainWindow", u"Calculate Areas", None))
+        self.pushButton_ExportRes.setText(
+            QtCore.QCoreApplication.translate(
+                "MainWindow", u"Export Results", None))
+        self.label_Q.setText(
+            QtCore.QCoreApplication.translate(
+                "MainWindow", u"Q (\u00c5\u00af\u00b9):", None))
+        self.pushButton_Q_p.setText(
+            QtCore.QCoreApplication.translate("MainWindow", u"Q +", None))
+        self.pushButton_Q_m.setText(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Q -", None))
+        self.menuFile.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"File", None))
+        self.menuLoad_data.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"&Load data", None))
+        self.menuAnalysis.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Analysis", None))
+        self.menuHelp.setTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"Help", None))
+        self.toolBar.setWindowTitle(QtCore.QCoreApplication.translate(
+            "MainWindow", u"toolBar", None))
     # retranslateUi

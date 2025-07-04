@@ -209,7 +209,7 @@ class MainWin(QMainWindow, Ui_MainWindow):
             q: str
             for i, q in enumerate(qlist):
                 self._dataDic[q] = {"measData":
-                                    self.loadDLG._dfS.iloc[:, 3*i:3*i+3]}
+                                    self.loadDLG._dfS.iloc[:, 3 * i:3 * i + 3]}
             # Pongo las Qs en el combo box
             self.comboBox_Q.addItems(qlist)
             # Al poner el valor del combo, me crea la gráfica,
@@ -254,23 +254,23 @@ class MainWin(QMainWindow, Ui_MainWindow):
         # Si no es el último y además el siguiente en la lista es mayor que
         # el actual, pongo el siguiente
         if (
-            cur_item != self.comboBox_Q.count()-1 and
-            float(self.comboBox_Q.itemText(cur_item+1)) >
-            float(self.comboBox_Q.itemText(cur_item))
+            cur_item != self.comboBox_Q.count() - 1
+            and float(self.comboBox_Q.itemText(cur_item + 1))
+            > float(self.comboBox_Q.itemText(cur_item))
         ):
             # ojo, que de esta llamada me va a la funcion de cambiar
             # el valor del comboBox
-            self.comboBox_Q.setCurrentIndex(cur_item+1)
-            next_qvalue = self.comboBox_Q.itemText(cur_item+1)
+            self.comboBox_Q.setCurrentIndex(cur_item + 1)
+            next_qvalue = self.comboBox_Q.itemText(cur_item + 1)
         # Si no es el primero de la lista y el anterior en la lista es mayor
         # que el actual, pongo el anterior
         elif (
-            cur_item != 0 and
-            float(self.comboBox_Q.itemText(cur_item-1)) >
-            float(self.comboBox_Q.itemText(cur_item))
+            cur_item != 0
+            and float(self.comboBox_Q.itemText(cur_item - 1))
+            > float(self.comboBox_Q.itemText(cur_item))
         ):
-            self.comboBox_Q.setCurrentIndex(cur_item-1)
-            next_qvalue = self.comboBox_Q.itemText(cur_item-1)
+            self.comboBox_Q.setCurrentIndex(cur_item - 1)
+            next_qvalue = self.comboBox_Q.itemText(cur_item - 1)
         # Si es o el primero o el último, no hago nada
         else:
             return True
@@ -345,21 +345,21 @@ class MainWin(QMainWindow, Ui_MainWindow):
         # Si no es el primero y además el anterior en la lista es menor que
         # el actual, pongo el anterior
         if (
-            cur_item != 0 and
-            float(self.comboBox_Q.itemText(cur_item-1)) <
-            float(self.comboBox_Q.itemText(cur_item))
+            cur_item != 0
+            and float(self.comboBox_Q.itemText(cur_item - 1))
+            < float(self.comboBox_Q.itemText(cur_item))
         ):
-            self.comboBox_Q.setCurrentIndex(cur_item-1)
-            next_qvalue = self.comboBox_Q.itemText(cur_item-1)
+            self.comboBox_Q.setCurrentIndex(cur_item - 1)
+            next_qvalue = self.comboBox_Q.itemText(cur_item - 1)
         # Si no es el último de la lista y el siguiente en la lista es menor
         # que el actual, pongo el siguiente
         elif (
-            cur_item != self.comboBox_Q.count()-1 and
-            float(self.comboBox_Q.itemText(cur_item+1)) <
-            float(self.comboBox_Q.itemText(cur_item))
+            cur_item != self.comboBox_Q.count() - 1
+            and float(self.comboBox_Q.itemText(cur_item + 1))
+            < float(self.comboBox_Q.itemText(cur_item))
         ):
-            self.comboBox_Q.setCurrentIndex(cur_item+1)
-            next_qvalue = self.comboBox_Q.itemText(cur_item+1)
+            self.comboBox_Q.setCurrentIndex(cur_item + 1)
+            next_qvalue = self.comboBox_Q.itemText(cur_item + 1)
         else:
             return True
         # Si estoy en la ventana de calcular las áreas
@@ -437,8 +437,8 @@ class MainWin(QMainWindow, Ui_MainWindow):
         # Si estoy en la pantalla de calcular las áreas y además el cambio
         # de Q en el comboBox no viene dado por los botones Q_p y Q_m
         if (
-            self.groupBox_area.isVisible() is True and
-            self._qChangeFromButton is False
+            self.groupBox_area.isVisible() is True
+            and self._qChangeFromButton is False
         ):
             # Cambio la visibilidad de las casillas
             self.groupBox_ROI2.hide()

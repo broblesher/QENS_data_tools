@@ -77,10 +77,10 @@ class FuncionesMenuIntegrar:
         columns: pd.Index
         columns = dfS.columns
         qnumber: int
-        qnumber = int(columns.size/3)
+        qnumber = int(columns.size / 3)
         for i in range(qnumber):
-            qstr = columns[3*i+1]
-            qstr = qstr[qstr.rfind('_')+1:-3]
+            qstr = columns[3 * i + 1]
+            qstr = qstr[qstr.rfind('_') + 1:-3]
             qlist.append(qstr)
         return qlist
 
@@ -111,13 +111,13 @@ class FuncionesMenuIntegrar:
             plot.
         """
         legend: str
-        legend = dfS.columns[3*cur_index+1]
+        legend = dfS.columns[3 * cur_index + 1]
         x: pd.Series
         y: pd.Series
         height_err: pd.Series
-        x = dfS.iloc[:, 3*cur_index]
-        y = dfS.iloc[:, 3*cur_index+1]
-        height_err = dfS.iloc[:, 3*cur_index+2]
+        x = dfS.iloc[:, 3 * cur_index]
+        y = dfS.iloc[:, 3 * cur_index + 1]
+        height_err = dfS.iloc[:, 3 * cur_index + 2]
         pitem.addLegend()
         err_bar: pg.ErrorBarItem
         err_bar = pg.ErrorBarItem(x=x, y=y, height=height_err, beam=0.05)
@@ -236,24 +236,24 @@ class FuncionesMenuIntegrar:
         # Add the LinearRegionItem to the ViewBox, but tell the ViewBox to
         # exclude this item when doing auto-range calculations.
         pg.InfLineLabel(
-                dataDic[cur_qvalue]["lrois"][lroi_n].lines[0],
-                text="ROI " + str(lroi_n+1),
-                rotateAxis=(1, 0),
-                position=0.95,
-                color=lcolor,
-                movable=True)
+            dataDic[cur_qvalue]["lrois"][lroi_n].lines[0],
+            text="ROI " + str(lroi_n + 1),
+            rotateAxis=(1, 0),
+            position=0.95,
+            color=lcolor,
+            movable=True)
         pg.InfLineLabel(
-                dataDic[cur_qvalue]["lrois"][lroi_n].lines[0],
-                text="x1: {value:0.2f}",
-                position=0.85,
-                color=lcolor,
-                movable=True)
+            dataDic[cur_qvalue]["lrois"][lroi_n].lines[0],
+            text="x1: {value:0.2f}",
+            position=0.85,
+            color=lcolor,
+            movable=True)
         pg.InfLineLabel(
-                dataDic[cur_qvalue]["lrois"][lroi_n].lines[1],
-                text="x2: {value:0.2f}",
-                position=0.85,
-                color=lcolor,
-                movable=True)
+            dataDic[cur_qvalue]["lrois"][lroi_n].lines[1],
+            text="x2: {value:0.2f}",
+            position=0.85,
+            color=lcolor,
+            movable=True)
 
     def calcArea(self, cur_qvalue: str, dataDic: dict):
         """Calculate the areas under the curve in the ROIs.
@@ -312,6 +312,25 @@ class FuncionesMenuIntegrar:
             dataDic[cur_qvalue]["lareas"].append(area)
 
     def dict_to_csv(self, dic: dict):
+        """Export dictionary to csv.
+
+        Parameters
+        ----------
+        dic: dict
+            The dictionary with the data to be saved.
+
+        Other parameters
+        ----------------
+        dfDic: pd.DataFrame
+        n_ROIs: pd.Series
+        n_ROIs_arr: list
+        emin: list
+        emax: list
+        area: list
+        emin_h: str
+        emax_h: str
+        area_h: str
+        """
         dfDic: pd.DataFrame
         n_ROIs: pd.Series
         n_ROIs_arr: list
@@ -334,11 +353,11 @@ class FuncionesMenuIntegrar:
         n_ROIs = pd.Series(n_ROIs_arr, name='no.ROIs')
         dfDic = pd.concat([q_values, n_ROIs], axis=1)
         for roi_index in range(5):  # range(len(dic[q_value]["lareas"])):
-            emin_h = 'E_min_' + str(roi_index+1) + ' (meV)'
-            emax_h = 'E_max_' + str(roi_index+1) + ' (meV)'
-            area_h = 'Area_' + str(roi_index+1)
+            emin_h = 'E_min_' + str(roi_index + 1) + ' (meV)'
+            emax_h = 'E_max_' + str(roi_index + 1) + ' (meV)'
+            area_h = 'Area_' + str(roi_index + 1)
             for q_value in dic.keys():
-                if len(dic[q_value]["lareas"]) < roi_index+1:
+                if len(dic[q_value]["lareas"]) < roi_index + 1:
                     emin.append(None)
                     emax.append(None)
                     area.append(None)
